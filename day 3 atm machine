@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class AtmMachine {
+    public static void main(String[] args) {
+        int bankBalance=5000;
+        int option;
+        System.out.println("enter option 1 for credit|| enter option 2 for debit:");
+        Scanner sc=new Scanner(System.in);
+        option= sc.nextInt();
+
+        if (option==1){
+            System.out.println("you want to select the option1 to add amount in account:" );
+            int amount= sc.nextInt();
+            bankBalance= bankBalance+amount;
+            System.out.println("know balance is:"+bankBalance);
+        }
+        else if(option==2){
+            System.out.println("you want to select the option 2 know you want to substract the amount:");
+            int amount= sc.nextInt();
+            if(amount>bankBalance){
+                System.out.println("insufficient balance");
+            }else {
+                  bankBalance=bankBalance-amount;
+
+            }
+
+            }else {
+            System.out.println("select the correct option.");
+        }
+        System.out.println("total amount:"+bankBalance);
+
+    }
+}
